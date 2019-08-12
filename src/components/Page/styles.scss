@@ -1,0 +1,16 @@
+@import "SHARED/reset.scss";
+
+:host {
+	height: 100%;
+	width: 100%;
+}
+.wrapper {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+	.menuButton {
+		font-size: 2.62em;
+	}

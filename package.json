@@ -1,0 +1,28 @@
+{
+  "name": "web-components-gallery",
+  "version": "0.1.0",
+  "description": "A gallery component made with web-components",
+  "main": "index.js",
+  "scripts": {
+    "build-prod": "cp -r src/index.html dist && webpack --mode=production",
+    "build-dev": "cp -r src/index.html dist && webpack-dev-server --open --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pookage/web-components-gallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pookage/web-components-gallery/issues"
+  },
+  "homepage": "https://github.com/pookage/web-components-gallery#readme",
+  "devDependencies": {
+    "css-loader": "^3.1.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
