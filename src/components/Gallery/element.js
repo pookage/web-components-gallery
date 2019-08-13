@@ -112,7 +112,6 @@ export default class Gallery extends HTMLElement {
 			activeIndex
 		} = state;
 
-		// mark active thumb as checked
 		const activeThumbId = `thumb-${activeIndex}`;
 		const activeThumb   = this.inputs.find(input => input.id === activeThumbId);
 
@@ -125,9 +124,6 @@ export default class Gallery extends HTMLElement {
 		this.mainImg.alt                   = description
 		this.mainImg.src                   = imageSrc;
 		this.voidImg.style.backgroundImage = `url(${imageSrc})`;
-		// this.voidImg.setAttribute("style", `background-image: ${imageSrc}`)
-
-		console.log(this.voidImg, this.voidImg.style)
 	}//stateUpdated
 
 	setActiveIndex(state, index){
