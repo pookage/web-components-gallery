@@ -1,6 +1,6 @@
 # Gallery with Web Components
 
-![Menu Button demo](https://raw.githubusercontent.com/pookage/web-components-gallery/master/screenshots/demo.gif)
+![Menu Button demo](https://raw.githubusercontent.com/pookage/web-components-gallery/master/screenshots/demo__2.gif)
 
 A multi-page gallery with thumbs and next/prev buttons, used to teach web-components, built with:
 
