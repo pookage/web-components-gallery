@@ -1,0 +1,147 @@
+@import "SHARED/reset.scss";
+
+:host {
+	width: 100%;
+	height: 100%;
+	--color__accent: #eee;
+}
+.wrapper {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	flex-direction: column;
+}
+	.container {
+		flex: 0 1 auto;
+		height: 100%;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+		.main {
+			height: 100%;
+			width: 100%;
+			.image {
+				width: 100%;
+				object-fit: contain;
+				filter: drop-shadow(0 0 1.62rem rgba(0,0,0,0.75));
+			}
+		}
+			.void {
+				height: 110%;
+				width: 110%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				z-index: -1;
+				transform: translate(-50%, -50%);
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				opacity: 0.8;
+				filter: blur(1rem);
+			}
+		.button {
+			display: block;
+			font-size: 4.25em;
+			height: 1em;
+			width: 2em;
+			position: absolute;
+			top: 50%;
+			background-color: #fff;
+			transition: transform .3s, background-color .15s;
+			.icon {
+				display: block;
+				height: 100%;
+				width: 50%;
+				position: absolute;
+				top: 0;
+				background: url("assets/icons/arrow.svg") center / auto 50% no-repeat;
+				transition: transform .15s;
+			}
+			&.next {
+				right: 0;
+				border-radius: 0.62em 0 0 0.62em;
+				transform: translate(50%, -50%);
+				.icon {
+					left: 0;
+					transform: scale(1, 1);
+				}
+			}
+			&.previous {
+				left: 0;
+				border-radius: 0 0.62em 0.62em 0;
+				transform: translate(-50%, -50%);
+				.icon {
+					right: 0;
+					transform: scale(-1, 1);
+				}
+			}
+
+			&:hover,
+			&:focus {
+				transform: translate(0%, -50%);
+				cursor: pointer;
+				&.next .icon {
+					transform: scale(1.15);
+				}
+				&.previous .icon {
+					transform: scale(-1.15, 1.15);	
+				}
+			}
+			&:focus,
+			&:active {
+				outline: 0;
+				background-color: var(--color__accent);
+			}
+			&:active {
+				transition: transform .15s;
+				&.next {
+					transform: translate(10%, -50%);
+				}
+				&.previous {
+					transform: translate(-10%, -50%);
+				}
+			}
+		}
+
+	.thumbs {
+		width: 100%;
+		max-height: 25vh;
+	}
+		.list {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			align-items: center;
+		}
+			.item {
+				flex: 1;
+				height: 100%;
+				position: relative;
+				overflow: hidden;
+				list-style-type: none;
+			}
+				.radio {
+					position: absolute;
+					z-index: -1;
+					&:not(:checked) ~ .label {
+						filter: grayscale(1);
+					}
+					&:checked ~ .label,
+					& ~ .label:hover {
+						transform: scale(1);
+						filter: grayscale(0);
+					}
+
+				}
+				.label {
+					display: block;
+					height: 100%;
+					transform: scale(1.05);
+					transition: transform .3s, filter .3s;
+					&:hover {
+						cursor: pointer;
+					}
+				}
+
