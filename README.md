@@ -8,7 +8,7 @@ A multi-page gallery with thumbs and next/prev buttons, used to teach web-compon
 - scss
 - webpack
 
-Live demo [here](https://pookage.github.io/web-components-gallery/dist/)
+Live demo [here](https://pookage.github.io/web-components-gallery/dist/index.html)
 
 ## Usage
 
